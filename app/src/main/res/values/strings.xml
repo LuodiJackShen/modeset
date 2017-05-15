@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">MS</string>
+    <string name="label">情景定时</string>
+    <string name="guide">模式开关用来选择上课时手机的情景模式，有振动和静音可选。\n
+        时令开关用来选择是夏时令还是冬时令，需要说明的是此开关由程序自己选定（此程序
+        默认夏时令是从5月1日开始的）。\n当点击全部取消按钮后，先前设置的所有定时任务都
+        会被取消，若先前没有定时任务，则不会进行任何操作。\n需要特别注意的
+        是，一定要允许程序后台运行。\n当定时设置了，但不想让他执行的时候，一定要按取消
+        键，否则他肯定会运行！\n\n
+        情景定时 v2.6.1\n
+        Based on Android 4.0\n
+        ©2016 Jack All Rights Reserved
+    </string>
+    <string name="alarm_shutdown">设置定时重启</string>
+    <string name="auto_set">自定义</string>
+    <string name="set_start_time">设置开始时间</string>
+    <string name="set_end_time">设置结束时间</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+</resources>

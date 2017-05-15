@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:scrollbars="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:stretchColumns="0">
+
+        <TableRow android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@drawable/keshi"
+                android:paddingLeft="50dp" />
+
+            <CheckBox
+                android:id="@+id/chooseAll"
+                android:hint="全选" />
+
+        </TableRow>
+
+        <TableRow android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="第一、二节课"
+                android:textColor="@color/common_action_bar_splitter"
+                android:textSize="25sp" />
+
+            <CheckBox android:id="@+id/class1_2" />
+
+        </TableRow>
+
+
+        <TableRow android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="第三、四节课"
+                android:textColor="@color/common_action_bar_splitter"
+                android:textSize="25sp" />
+
+            <CheckBox android:id="@+id/class3_4" />
+
+        </TableRow>
+
+
+        <TableRow android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="第五、六节课"
+                android:textColor="@color/common_action_bar_splitter"
+                android:textSize="25sp" />
+
+            <CheckBox android:id="@+id/class5_6" />
+        </TableRow>
+
+
+        <TableRow android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="第七、八节课"
+                android:textColor="@color/common_action_bar_splitter"
+                android:textSize="25sp" />
+
+            <CheckBox android:id="@+id/class7_8" />
+        </TableRow>
+
+        <TableRow android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="第九、十节课"
+                android:textColor="@color/common_action_bar_splitter"
+                android:textSize="25sp" />
+
+            <CheckBox android:id="@+id/class9_10" />
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Switch
+                android:id="@+id/model"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_horizontal"
+                android:layout_weight="1"
+                android:checked="true"
+                android:paddingBottom="15dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="20dp"
+                android:textOff="静音模式"
+                android:textOn="振动模式" />
+
+            <Switch
+                android:id="@+id/season"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_horizontal"
+                android:layout_weight="1"
+                android:checked="true"
+                android:paddingBottom="15dp"
+                android:paddingRight="20dp"
+                android:paddingTop="20dp"
+                android:textOff="冬时令"
+                android:textOn="夏时令" />
+
+        </LinearLayout>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开:震动 关:静音"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开:夏时令 关:冬时令"
+                android:textColor="@color/colorAccent" />
+
+        </TableRow>
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:paddingTop="20dp">
+
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="left"
+                android:background="@drawable/submit"
+                android:paddingLeft="100dp" />
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="right|top"
+                android:background="@drawable/cancel" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+            <Button
+                android:id="@+id/auto_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/auto_set" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+            <Button
+                android:id="@+id/alarm_shutdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/alarm_shutdown"
+                android:visibility="invisible" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingRight="25dp"
+            android:paddingTop="50dp">
+
+            <Button
+                android:id="@+id/guide"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="right"
+                android:background="@drawable/guidebutton" />
+
+        </FrameLayout>
+
+    </TableLayout>
+</ScrollView>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.modeset">
+
+    <!-- 在SD卡中创建与删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 向SD卡中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission
+        android:name="android.permission.SHUTDOWN"
+        tools:ignore="ProtectedPermissions"/>
+
+    <permission android:name="android.permission.REBOOT"/>
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <application
+        android:name=".util.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/label"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ResultsHandler"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".activity.Guide"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".activity.AutoSetActivity"
+            android:launchMode="singleTask"/>
+
+        <service android:name=".service.SilenceSetService"/>
+        <service android:name=".service.VibrateSetService"/>
+        <service android:name=".service.NormalSetService"/>
+        <service android:name=".service.CancelService"/>
+
+        <receiver android:name=".receiver.SilenceReceiver">
+            <intent-filter>
+                <action android:name="android.com.setsilencemodel"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.VibrateReceiver">
+            <intent-filter>
+                <action android:name="android.com.setvibratemodel"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.Shutdown">
+            <intent-filter>
+                <action android:name="com.modeset.alarmshutdown"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.NormalReceiver">
+            <intent-filter>
+                <action android:name="android.com.setnormalmodel"/>
+            </intent-filter>
+        </receiver>
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login">
+        </activity>
+    </application>
+
+</manifest>
